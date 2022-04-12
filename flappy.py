@@ -11,16 +11,17 @@ DELTA_TIME = 1 # Delta_Time (Congliabile 1/2 MAX 3) serve per avere una proporzi
 FPS = 60 * DELTA_TIME # Frame per second
 VEL_AVANZ = 3 * MULT / DELTA_TIME # Velocità dello sfondo
 
-#immagini
-uccello = pygame.image.load('immagini/uccello.png')
-gameover = pygame.image.load('immagini/gameover.png')
-
 #SCREEN
 TITLE = "Flappy Bird"
 SCREEN_width, SCREEN_height = 288 * MULT, 512 * MULT
 SCREEN = pygame.display.set_mode((SCREEN_width,SCREEN_height))
 pygame.display.set_caption(TITLE)
 pygame.mouse.set_visible(False)	# indica se il cursore è visibile a schermo
+
+#immagini
+uccello = pygame.image.load('immagini/uccello.png').convert_alpha()
+gameover = pygame.image.load('immagini/gameover.png').convert_alpha()
+
 pygame.display.set_icon(uccello) # imposta come icona di finestra flappy
 
 sfondo = pygame.image.load('immagini/sfondo.png').convert()
